@@ -173,8 +173,8 @@ const femaleTop = () => {
 };
 
 export const generateMaleAvatar = () => {
-  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Circle&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&facialHairColor=${facialHairColor()}&facialHairType=${facialHair()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${top()}`;
+  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&facialHairColor=${facialHairColor()}&facialHairType=${facialHair()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${top()}`;
 };
 export const generateFemaleAvatar = () => {
-  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Circle&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${femaleTop()}`;
+  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${femaleTop()}`;
 };
