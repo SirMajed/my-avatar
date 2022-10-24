@@ -8,7 +8,7 @@ import { generateFemaleAvatar, generateMaleAvatar } from "src/avatarGenerator";
 import Image from "next/image";
 import { useEffect } from "react";
 const Home = () => {
-  const ref = useRef<null | HTMLDivElement>();
+  const ref = useRef<null | HTMLDivElement | any>();
   const [gender, setGender] = useState("male");
   const [avatar, setAvatar] = useState("");
   const handleClick = () => {
@@ -19,9 +19,9 @@ const Home = () => {
   };
 
   useEffect(() => {
-    setAvatar(generateMaleAvatar())
-  }, [])
-  
+    setAvatar(generateMaleAvatar());
+  }, []);
+
   const generateAv = () => {
     if (gender === "male") {
       setAvatar(generateMaleAvatar());
@@ -60,8 +60,9 @@ const Home = () => {
         </Grid>
       </Section>
 
-      <Section>
+      <Section >
         <Grid
+          
           display="flex"
           direction={"column"}
           justifyContent="space-between"
@@ -71,12 +72,13 @@ const Home = () => {
           minHeight={"100vh"}
         >
           <Grid
+           
             marginTop="10px"
             display="flex"
             direction={"column"}
             alignItems="center"
           >
-            <h1 className="grad">Generate your avatar now!</h1>
+            <h1 ref={ref} className="grad">Generate your avatar now!</h1>
             <p className="grad">
               Get started by selecting the gender first and then, voila! you
               will see your avatar and you can download it.
