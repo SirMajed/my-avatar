@@ -156,7 +156,7 @@ const Home = () => {
           </Grid>
 
           <Image src={avatar} height={350} width={350} />
-
+          <p className="grad pulse">Image downloading coming very, very soon</p>
           <footer>
             Designed by{" "}
             <a
