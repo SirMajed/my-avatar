@@ -172,9 +172,9 @@ const femaleTop = () => {
   return item;
 };
 
-export const generateMaleAvatar = () => {
-  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&facialHairColor=${facialHairColor()}&facialHairType=${facialHair()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${top()}`;
+export const generateMaleAvatar = (skin:string) => {
+  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&facialHairColor=${facialHairColor()}&facialHairType=${facialHair()}&hairColor=${hairColor()}&mouthType=${mouth()}&topType=${top()}&skinColor=${skin}`;
 };
-export const generateFemaleAvatar = () => {
-  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&hairColor=${hairColor()}&mouthType=${mouth()}&skinColor=Light&topType=${femaleTop()}`;
+export const generateFemaleAvatar = (skin:string) => {
+  return `https://avataaars.io/?accessoriesType=${accessories()}&avatarStyle=Transparent&clotheColor=${clothesColor()}&clotheType=${clothes()}&eyeType=${eyeType()}&eyebrowType=${eyebrowType()}&hairColor=${hairColor()}&mouthType=${mouth()}&topType=${femaleTop()}&skinColor=${skin}`;
 };

@@ -10,23 +10,28 @@ import { useEffect } from "react";
 const Home = () => {
   const ref = useRef<null | HTMLDivElement | any>();
   const [gender, setGender] = useState("male");
+  const [skin, setSkin] = useState("Pale");
   const [avatar, setAvatar] = useState("");
+  
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   const handleGender = (event: any, newGender: any) => {
     setGender(newGender);
   };
+  const handleSkin = (event: any, newSkin: any) => {
+    setSkin(newSkin);
+  };
 
   useEffect(() => {
-    setAvatar(generateMaleAvatar());
+    setAvatar(generateMaleAvatar('Light'));
   }, []);
 
   const generateAv = () => {
     if (gender === "male") {
-      setAvatar(generateMaleAvatar());
+      setAvatar(generateMaleAvatar(skin));
     } else {
-      setAvatar(generateFemaleAvatar());
+      setAvatar(generateFemaleAvatar(skin));
     }
   };
   return (
@@ -90,7 +95,7 @@ const Home = () => {
               direction="column"
               alignItems="center"
             >
-              <h3 className="grad">Select Gender:</h3>
+              <h3 className="grad">Select Gender</h3>
               <ToggleButtonGroup
                 value={gender}
                 exclusive
@@ -104,6 +109,37 @@ const Home = () => {
                 <ToggleButton value="female" aria-label="female">
                   <Female />
                 </ToggleButton>
+              </ToggleButtonGroup>
+              <h3 className="grad">Skin</h3>
+              <ToggleButtonGroup
+                value={skin}
+                exclusive
+                onChange={handleSkin}
+                aria-label="text alignment"
+                sx={{ marginTop: "4px" }}
+              >
+                <ToggleButton   value="Tanned" aria-label="Tanned">
+                  <Box bgcolor={'#e59849'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="Yellow" aria-label="Yellow">
+                  <Box bgcolor={'#eed065'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="Pale" aria-label="Yellow">
+                  <Box bgcolor={'#f5dbb5'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="Light" aria-label="Light">
+                  <Box bgcolor={'#deb88b'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="Brown" aria-label="Brown">
+                  <Box bgcolor={'#be895e'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="DarkBrown" aria-label="DarkBrown">
+                  <Box bgcolor={'#9b5d31'} height="15px" width="15px"/>
+                </ToggleButton>
+                <ToggleButton   value="Black" aria-label="Black">
+                  <Box bgcolor={'#5a4538'} height="15px" width="15px"/>
+                </ToggleButton>
+              
               </ToggleButtonGroup>
               <Button
                 sx={{ marginY: "5px" }}
