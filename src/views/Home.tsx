@@ -42,12 +42,14 @@ const Home = () => {
           direction="column"
           alignItems={"center"}
           justifyContent="center"
+          textAlign={'center'}
           style={{ minHeight: "100vh" }}
         >
           <h1 className="grad">My Avatar</h1>
           <p
             style={{ marginBottom: "30px", marginTop: "10px" }}
             className="grad"
+
           >
             My Avatar - Developed by Majed by using the core react component for
             Avataaars Generator
@@ -82,6 +84,7 @@ const Home = () => {
             display="flex"
             direction={"column"}
             alignItems="center"
+            textAlign={'center'}
           >
             <h1 ref={ref} className="grad">Generate your avatar now!</h1>
             <p className="grad">
